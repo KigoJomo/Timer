@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$black: #141414;
+$white: #ececec;
+$blue: #012ca0;
+$gray: #4b4b4b;
+$dark_white: #bebebe;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: $white;
+	font-family: "Poppins", sans-serif;
+}
+h1,
+h2,
+h3 {
+	text-transform: capitalize;
+}
+html {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+
+	body {
+		width: 100%;
+		height: 100%;
+		background-color: $black;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 25px;
+
+		.focus_panel,
+		.settings_panel {
+			width: 35vw;
+			aspect-ratio: 4/3;
+			padding: 25px;
+			border-radius: 10px;
+			background-color: $gray;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 15px;
+		}
+		.focus_panel {
+			.timer {
+				width: 100%;
+				display: none;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+				.minutes_seconds {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 20px;
+					font-size: 3rem;
+
+					// .minutes,
+					// .seconds {
+					// }
+				}
+				.buttons {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 20px;
+					button {
+						background-color: $blue;
+						padding: 10px 30px;
+						border-radius: 5px;
+						border: none;
+						cursor: pointer;
+						box-shadow: 0px 3px 5px 0px $black;
+						&:focus {
+							border: none;
+							outline: none;
+						}
+						text-transform: capitalize;
+						font-size: 1.2rem;
+					}
+				}
+			}
+			.custom_input {
+				width: 50%;
+				height: 60px;
+				// border: 1px solid $dark_white;
+				border-radius: 10px;
+				background-color: $black;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+
+				label {
+					position: absolute;
+					font-size: 0.7rem;
+					bottom: 1px;
+					color: $dark_white;
+				}
+
+				input {
+					width: 60%;
+					color: $dark_white;
+					background: transparent;
+					border: none;
+					// border-bottom: 1px solid $dark_white;
+					font-size: 1.7rem;
+					text-align: center;
+					&::-webkit-inner-spin-button,
+					&::-webkit-outer-spin-button {
+						display: none;
+					}
+					&:focus {
+						color: $white;
+						border: none;
+						outline: none;
+					}
+				}
+				button {
+					background-color: transparent;
+					border: 1px solid $dark_white;
+					border-radius: 10px;
+					font-size: 2rem;
+					padding: 0 10px;
+					cursor: pointer;
+				}
+			}
+			#start_session {
+				background-color: $blue;
+				padding: 10px 30px;
+				border-radius: 5px;
+				border: none;
+				cursor: pointer;
+				box-shadow: 0px 3px 5px 0px $black;
+				&:focus {
+					border: none;
+					outline: none;
+				}
+				text-transform: capitalize;
+				font-size: 1.2rem;
+			}
+		}
+		.settings_panel {
+			align-items: flex-start;
+			.fieldwrapper {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: center;
+				gap: 7px;
+				label {
+					font-size: 0.9rem;
+					text-transform: capitalize;
+				}
+				input {
+					width: 50%;
+					padding: 5px 10px;
+					background: $black;
+					font-size: 1.5rem;
+					border: none;
+					border-radius: 5px;
+					color: $white;
+					text-align: center;
+
+					&:focus {
+						border: none;
+						outline: none;
+					}
+				}
+			}
+			#save_settings {
+				background-color: $blue;
+				padding: 10px 30px;
+				border-radius: 5px;
+				border: none;
+				cursor: pointer;
+				box-shadow: 0px 3px 5px 0px $black;
+				&:focus {
+					border: none;
+					outline: none;
+				}
+				text-transform: capitalize;
+				font-size: 1.2rem;
+			}
+			.info {
+				font-size: 0.8rem;
+				color: $dark_white;
+			}
+		}
+	}
+}

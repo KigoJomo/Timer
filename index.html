@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Test</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <div class="focus_panel">
+        <h2>focus session</h2>
+        <div id="timer" class="timer">
+            <div class="minutes_seconds">
+                <p id="minutes">25</p>
+                <p>:</p>
+                <p id="seconds">00</p>
+            </div>
+            <div class="buttons">
+                <button id="pauseContinue">pause</button>
+                <button id="terminateSession">stop</button>
+            </div>
+        </div>
+        <div id="set_duration" class="custom_input">
+            <button id="decrement">
+                < </button>
+                    <label for="duration">mins</label>
+                    <input type="number" min="30" value="30" id="duration" />
+                    <button id="increment">></button>
+        </div>
+        <p id="breaks_info">You'll have one break</p>
+        <button id="start_session">start</button>
+    </div>
+    <div class="settings_panel">
+        <h2>settings</h2>
+        <div class="fieldwrapper">
+            <label for="focus_period">Focus period (mins)</label>
+            <input type="number" name="focus_period" id="focus_period" value="25">
+        </div>
+        <div class="fieldwrapper">
+            <label for="break_duration">break duration (mins)</label>
+            <input type="number" name="break_duration" id="break_duration" value="5">
+        </div>
+        <p class="info">Note: Focus session = Focus period + Break duration</p>
+        <button id="save_settings">save settings</button>
+    </div>
+
+    <script src="./scripts/scripts.js"></script>
+</body>
+
+</html>
